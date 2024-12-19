@@ -1,0 +1,48 @@
+/* Header */
+.header {
+    background-color: #1d3d84;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .header i {
+    margin-right: 8px;
+  }
+  
+  .header .dropdown-menu {
+    min-width: 200px;
+  }
+  
+  /* Menú lateral */
+  .sidenav {
+    position: fixed;
+    top: 0;
+    left: 0; /* Desde la izquierda */
+    height: 100%;
+    width: 250px;
+    background-color: #343a40;
+    transform: translateX(-100%); /* Inicialmente oculto desde la izquierda */
+    transition: transform 0.3s ease;
+  }
+  
+  .sidenav.active {
+    transform: translateX(0); /* Desplazar el menú desde la izquierda */
+  }
+  
+  .sidenav ul {
+    padding: 20px;
+    list-style-type: none;
+  }
+  
+  .sidenav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  
+  .sidenav ul li a:hover {
+    background-color: #007bff;
+  }
+  

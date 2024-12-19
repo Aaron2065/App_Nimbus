@@ -1,0 +1,26 @@
+<!-- Header -->
+<header class="header bg-primary text-white d-flex justify-content-between align-items-center p-3">
+    <!-- Parte izquierda: Ícono para abrir el menú lateral -->
+    <div class="dropdown">
+      <button class="btn btn-link text-white" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" (click)="toggleSidebar()">
+        <i class="bi bi-three-dots-vertical fs-3"></i> <!-- Ícono de menú -->
+      </button>
+    </div>
+  
+    <!-- Parte derecha: Icono y nombre de usuario -->
+    <div class="d-flex align-items-center">
+      <i class="bi bi-person-circle fs-1"></i> <!-- Ícono de perfil -->
+      <span class="ms-3">{{ username }}</span> <!-- Nombre del usuario dinámico -->
+    </div>
+  </header>
+  
+  <!-- Menú lateral (por ahora, será ocultado por CSS) -->
+  <div class="sidenav bg-dark text-white" [ngClass]="{'active': isSidebarVisible}">
+    <ul class="list-unstyled">
+      <li><a (click)="navigateTo('libros')">Libros</a></li>
+      <li><a (click)="navigateTo('grupos')">Administrar Grupos</a></li>
+      <li><a (click)="navigateTo('usuarios')">Usuarios</a></li>
+      <li><a (click)="logout()">Cerrar Sesión</a></li>
+    </ul>
+  </div>
+  
